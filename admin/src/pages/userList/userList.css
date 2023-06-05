@@ -1,0 +1,38 @@
+.userList {
+    flex: 4;
+    margin-top: 40px;
+    margin-left: -120px;
+  }
+  
+  .userListUser {
+    display: flex;
+    align-items: center;
+  }
+
+  .CreateuserButton {
+    width:120px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(21, 196, 91);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-left: 30px;
+  }
+  
+  
+  .userListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  
+  .userListDelete{
+      color: red;
+      cursor: pointer;
+      padding: 10px;
+  } 
