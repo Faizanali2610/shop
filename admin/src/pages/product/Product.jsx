@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import "./product.css";
-import  Chart from "../../components/chart/Chart"
 import {getStorage, ref ,uploadBytesResumable, getDownloadURL} from "firebase/storage"
 import app from "../../firebase"
 import { useSelector } from "react-redux";
@@ -8,6 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import { userRequest } from "../../requestmethod";
 import { useDispatch } from "react-redux";
 import { updateProduct } from "../../redux/apicalls";
+import PublishRoundedIcon from '@mui/icons-material/PublishRounded';
 import { gridColumnGroupingSelector } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 
@@ -178,7 +178,7 @@ export default function Product() {
         <img src={product.img} alt="" className="productUploadImg" />
       )}      
                       <label htmlFor="file">
-                          <PublishOutlined/>
+                          <PublishRoundedIcon />
                       </label>
                       <input type="file" id="file" onChange={handleFileChange} />
                   </div>

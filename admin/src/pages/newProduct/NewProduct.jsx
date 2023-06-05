@@ -49,7 +49,9 @@ uploadTask.on('state_changed',
       case 'running':
         console.log('Upload is running');
         break;
+
     }
+
   }, 
   (error) => {
     console.log(error)
@@ -62,7 +64,8 @@ uploadTask.on('state_changed',
     });
   }
 );
-  navigate("/products")
+navigate("/products")
+
  }  
 
   

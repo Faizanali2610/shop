@@ -25,9 +25,10 @@ const App = () => {
           <Route path="/product/:id" element={<Product />}/>
           <Route path="/register" element={user ? <Navigate to="/"/> : <Register />}/>
           <Route path="/cart" element={<Cart />}/>
-          <Route path="/success" element={<Success />}/>
           <Route path="/register" element={<Register />} /> 
           <Route path="/logout" element={<Logout />} />
+          <Route path="/success" element={<Success />}/>
+
         </Routes>
       </Router>
   )

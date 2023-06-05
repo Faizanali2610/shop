@@ -227,7 +227,11 @@ const Cart = () => {
         tokenId: stripeToken.id,
         amount:cart.total *  100,
       }) 
-      navigate("/success",{data: res.data});
+      navigate("/success",{
+        state:{
+        stripeData:res.data,
+        cart: cart,
+    }});
     } catch (error) {
       console.log(error)
     }
@@ -256,9 +260,9 @@ const Cart = () => {
         <Bottom>
             <Info>
 
-              {cart.products.map(product=>(<Product>
-                
-                <ProductDetail>
+              {cart.products.map(product=>(
+              <Product>
+                  <ProductDetail>
                 <Image src={product.img}/>
                 <Details>
                   <ProductName><b>Product:</b> {product.title}</ProductName>
@@ -290,7 +294,7 @@ const Cart = () => {
               </SummaryItem>
               <SummaryItem>
                 <SummaryItemText>Estimated Shipping</SummaryItemText>
-                <SummaryItemPrice>$ 80</SummaryItemPrice>
+                <SummaryItemPrice>$ 5.90</SummaryItemPrice>
               </SummaryItem> 
               <SummaryItem>
                 <SummaryItemText>Shipping Discount</SummaryItemText>
