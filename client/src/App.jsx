@@ -28,10 +28,8 @@ const App = () => {
           <Route path="/register" element={<Register />} /> 
           <Route path="/logout" element={<Logout />} />
           <Route path="/success" element={<Success />}/>
-
         </Routes>
       </Router>
   )
 }
-
 export default App
