@@ -5,7 +5,6 @@ import "./featuredInfo.css";
 
 export default function FeaturedInfo() {
 const [income,setIncome] = useState([])
-const [perc,setPerc] = useState(0)
 
 useEffect(()=>{
   const getIncome = async () => {
@@ -28,7 +27,8 @@ useEffect(()=>{
         <div className="featuredMoneyContainer">
         <span className="featuredMoney">${income[0]?.total}</span>
          <span className="featuredMoneyRate">
-          22% <ArrowUpward className="featuredIcon" /></span>
+         <ArrowUpward className="featuredIcon"/>
+         </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
