@@ -59,7 +59,6 @@ router.post("/login",async(req,res)=>{
 router.post("/logout", async (req, res) => {
   try {
 
-    // localStorage.removeItem("accessToken");
     res.clearCookie("accessToken");
 
     

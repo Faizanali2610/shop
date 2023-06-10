@@ -40,7 +40,7 @@ router.delete("/:id",verifyTokenandAuthorization,async(req,res)=>{
 })
 
 
-// // // GET USER CART
+// // // GET USER ORDER
 router.get("/find/:id",async(req,res)=>{
     try {
     const  orders = await Order.findOne(req.params.id)
@@ -49,6 +49,7 @@ router.get("/find/:id",async(req,res)=>{
         res.status(500).json(error)
     }
 })
+
 
 // get all
 
