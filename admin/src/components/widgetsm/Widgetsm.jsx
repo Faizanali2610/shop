@@ -1,12 +1,14 @@
 import "./widgetsm.css";
 // import { Visibility } from "@material-ui/icons";
-import { VisibilityOutlined } from "@mui/icons-material";
+import { Handshake, VisibilityOutlined } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { userRequest } from "../../requestmethod";
-import logo from "../../assets/logo.jpeg"
+import profileicon from "../../assets/logo.jpeg"
+import { useNavigate } from "react-router-dom";
 
 export default function Widgetsm() {
   const [users,setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(()=>{
     const getUsers = async () => {
@@ -20,6 +22,10 @@ export default function Widgetsm() {
     getUsers();
   },[])
 
+  const handleclick = () => {
+    navigate("users")
+  }
+
   return (
     <div className="widgetSm">
       <span className="widgetSmTitle">New Join Members</span>
@@ -27,14 +33,14 @@ export default function Widgetsm() {
         {users.map((user)=>(
         <li className="widgetSmListItem" key={user._id}>
           <img
-            src={logo}
+            src={profileicon}
             alt="img"
             className="widgetSmImg"
           />
           <div className="widgetSmUser">
             <span className="widgetSmUsername">{user.username}</span>
           </div>
-          <button className="widgetSmButton">
+          <button className="widgetSmButton" onClick={handleclick}>
             <VisibilityOutlined className="widgetSmIcon" />
             Display
           </button>

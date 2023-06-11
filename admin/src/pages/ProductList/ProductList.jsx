@@ -14,9 +14,16 @@ const ProductList = () => {
     getProducts(dispatch)
   },[dispatch])
   
-  const handleDelete = (id) => {
-     deleteProducts(id,dispatch); 
-  };
+ const handleDelete = (id) => {
+  deleteProducts(id, dispatch)
+    .then(() => {
+      getProducts(dispatch);
+    })
+    .catch((error) => {
+      console.error("Error deleting product:", error);
+    });
+};
+
 
   const columns = [
     { field: "_id", headerName: "ID", width: 250 },
@@ -60,10 +67,6 @@ const ProductList = () => {
       },
     },
   ]
-
-
-
- 
 
   return (
   <div className="productList">

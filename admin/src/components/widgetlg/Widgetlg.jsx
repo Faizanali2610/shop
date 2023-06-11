@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { userRequest } from "../../requestmethod";
 import "./widgetlg.css";
 import {format} from "timeago.js"
+import profileicon from "../../assets/green.jpeg"
 
 export default function WidgetLg() {
   const [orders, setOrders] = useState([]);
@@ -34,6 +35,11 @@ export default function WidgetLg() {
         {orders.map((order) => (
           <tr className="widgetLgTr" key={order._id}>
             <td className="widgetLgUser">
+            <img
+            src={profileicon}
+            alt="img"
+            className="widgetSmImg"
+          />
               <span className="widgetLgName">{order._id}</span>
             </td>
             <td className="widgetLgDate">{format(order.createdAt)}</td>

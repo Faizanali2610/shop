@@ -15,7 +15,8 @@ export default function Topbar() {
       <div className="topbarWrapper">
 
         <div className="topLeft">
-          <span className="logo" style={{color:"blue"}}>FashionCart-Admin</span>
+   
+          <span className="logo" style={{color:"rgb(19, 19, 207)",marginLeft:"-10px"}}>FashionCart-Admin</span>
         </div>
         <div className="topRight">
        <Link to="/login"  className="Button">Login</Link> 

@@ -8,6 +8,8 @@
  .widgetLgTitle {
    font-size: 22px;
    font-weight: 600;
+   color: rgb(19, 19, 207);
+   margin-left: 17px;
  }
  
  .widgetLgTable{
@@ -57,3 +59,12 @@
      color: #2a7ade;
  
  }
+
+ .widgetSmImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  color: blue;
+}
