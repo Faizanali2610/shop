@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux/es/exports'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { login } from '../../redux/apicalls'
 import { useNavigate } from 'react-router-dom'
 import "./login.css"
@@ -9,12 +9,21 @@ const Login = () => {
     const [password,setPassword] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate();
+    
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const handleClick = (e)=>{
-        e.preventDefault()
-        login(dispatch,{username,password})
-        navigate("/")
-};
+    const handleClick = async (e)=>{
+       
+        try {
+          await login(dispatch,{username,password})
+          navigate('/');
+          window.location.reload();
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+    
 
   return (
     <div className="containers">
@@ -34,7 +43,7 @@ const Login = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="button" onClick={handleClick}>
+      <button className="button" onClick={handleClick} >
         Login
       </button>
     </div>

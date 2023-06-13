@@ -44,6 +44,7 @@ export default function Home() {
     }
    }
    getStats()
+ 
    },[MONTH])
 
 
@@ -56,7 +57,8 @@ export default function Home() {
         <WidgetSm/>
         <WidgetLg/>
       </div>  
-    </div>
+    </div>    
+
   );
 }
 

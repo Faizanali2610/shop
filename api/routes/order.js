@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Order = require("../models/Order");
 const { verifyTokenandAuthorization, verifyTokenandAdmin, verifytoken } = require("./verifytoken");
 
-// CREATE 
+// CREATE  
     router.post("/",verifytoken,async(req,res)=>{
         const newOrder = new Order(req.body)
     try {
@@ -37,9 +37,9 @@ router.delete("/:id",verifyTokenandAuthorization,async(req,res)=>{
     } catch (error) {
         res.status(500).json(error)
     }
-})
+})   
 
-
+ 
 // // // GET USER ORDER
 router.get("/find/:id",async(req,res)=>{
     try {
