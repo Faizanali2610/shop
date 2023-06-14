@@ -10,8 +10,6 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-
     const handleClick = async (e)=>{
        
         try {
@@ -23,8 +21,6 @@ const Login = () => {
         }
       };
     
-    
-
   return (
     <div className="containers">
     <div className="form">
@@ -44,7 +40,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button className="button" onClick={handleClick} >
-        Login
+        LOGIN
       </button>
     </div>
   </div>

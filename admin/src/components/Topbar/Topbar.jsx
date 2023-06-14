@@ -19,7 +19,9 @@ export default function Topbar() {
           <span className="logo" style={{color:"rgb(19, 19, 207)",marginLeft:"-10px"}}>FashionCart-Admin</span>
         </div>
         <div className="topRight">
-       <Link to="/login"  className="Button">Login</Link> 
+       <Link to="/login"  className="Button">LOGIN</Link> 
+       <Link to="/logout" className="Button">LOG-OUT</Link>      
+
 
           <div className="topbarIconContainer">
             <NotificationsNoneOutlined />

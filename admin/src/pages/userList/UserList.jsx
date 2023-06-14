@@ -29,7 +29,7 @@ export default function UserList() {
   const handleDelete = async (id) => {
     try {
       await deleteUsers(id, dispatch);
-      // Remove the deleted user from the state
+      
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.log(error);

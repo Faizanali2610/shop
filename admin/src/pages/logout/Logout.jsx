@@ -17,11 +17,7 @@ const Logout = () => {
     }
   };
 
-  return (
-    <button onClick={handleLogout}>
-      Logout
-    </button>
-  );
-};
+  handleLogout();
+}
 
 export default Logout;

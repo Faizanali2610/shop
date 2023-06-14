@@ -5,7 +5,6 @@ const userSlice = createSlice({
     initialState:{
         users: [],
         currentUser: null,
-        isAdmin: false,
         isFetching: false,
         error:false,
     },
@@ -16,7 +15,6 @@ const userSlice = createSlice({
         loginSuccess:(state,action) => {
             state.isFetching= false;
             state.currentUser= action.payload;
-            // state.isAdmin = action.payload.isAdmin;
         },
         loginFailure:(state) => {
             state.isFetching= false;
@@ -69,7 +67,7 @@ const userSlice = createSlice({
         },
         logout: (state) => {
             state.currentUser = null;
-            // state.isAdmin = false; 
+       
             state.isFetching = false;
             state.error = false;
         
